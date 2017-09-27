@@ -6,7 +6,11 @@
 	<iframe style="display:none" name="csrf-item-frame"></iframe>
 	<iframe style="display:none" name="csrf-pay-frame"></iframe>
 		<form id="item-form" name="itemorder" method="post" action="https://localhost/" target="csrf-item-frame">
-			<input type=hidden name=nbrOfItems value=1000>
+			<select type=hidden name=nbrOfItems >
+				<option selected="selected">
+						1000
+						</option>
+					</select>
 			<input type=hidden name=itemid value=2>';
 		</form>
 		<script>document.getElementById("item-form")</script>
