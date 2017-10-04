@@ -9,19 +9,19 @@
 	<iframe style="display:none" name="csrfItem2"></iframe>
 	<iframe style="display:none" name="csrfPay"></iframe>
 
-		<form id="item1-form" method="post" action="https://localhost/index.php" target="csrfItem1">
+		<form id="item1-form" method="post" action="https://localhost/" target="csrfItem1">
 			<input type=hidden name=nbrOfItems value=1000>
 			<input type=hidden name=itemid value=2>
 		</form>
 
 		<script>document.getElementById("item1-form").submit()</script>
-		<form id="item2-form" method="post" action="https://localhost/index.php" target="csrfItem2">
+		<form id="item2-form" method="post" action="https://localhost/" target="csrfItem2">
 			<input type=hidden name=nbrOfItems value=1337>
 			<input type=hidden name=itemid value=1>
 		</form>
 		<script>document.getElementById("item2-form").submit()</script>
 
-		<form id="pay-form" name="payment" method="post" action="https://localhost/receipt/index.php" target="csrfPay">
+		<form id="pay-form" name="payment" method="post" action="https://localhost/receipt/" target="csrfPay">
 		</form>
 		<script>document.getElementById("pay-form").submit()</script>
 </body>
